@@ -21,4 +21,3 @@ D:\Code\ENQuiz\ENQuiz\English\obj\Debug\English.csproj.GenerateResource.Cache
 D:\Code\ENQuiz\ENQuiz\English\bin\Debug\English.exe
 D:\Code\ENQuiz\ENQuiz\English\bin\Debug\English.pdb
 D:\Code\ENQuiz\ENQuiz\English\obj\Debug\English.Export.resources
-D:\Code\ENQuiz\ENQuiz\English\obj\Debug\English.csprojResolveAssemblyReference.cache

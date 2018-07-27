@@ -44,14 +44,14 @@
             // 
             // txtFile
             // 
-            this.txtFile.Location = new System.Drawing.Point(109, 29);
+            this.txtFile.Location = new System.Drawing.Point(103, 18);
             this.txtFile.Name = "txtFile";
             this.txtFile.Size = new System.Drawing.Size(217, 22);
             this.txtFile.TabIndex = 1;
             // 
             // btnFile
             // 
-            this.btnFile.Location = new System.Drawing.Point(345, 29);
+            this.btnFile.Location = new System.Drawing.Point(339, 18);
             this.btnFile.Name = "btnFile";
             this.btnFile.Size = new System.Drawing.Size(57, 23);
             this.btnFile.TabIndex = 3;
@@ -61,7 +61,7 @@
             // 
             // btnNew
             // 
-            this.btnNew.Location = new System.Drawing.Point(345, 66);
+            this.btnNew.Location = new System.Drawing.Point(339, 55);
             this.btnNew.Name = "btnNew";
             this.btnNew.Size = new System.Drawing.Size(57, 23);
             this.btnNew.TabIndex = 5;
@@ -71,7 +71,7 @@
             // 
             // txtNewFile
             // 
-            this.txtNewFile.Location = new System.Drawing.Point(109, 68);
+            this.txtNewFile.Location = new System.Drawing.Point(103, 57);
             this.txtNewFile.Name = "txtNewFile";
             this.txtNewFile.Size = new System.Drawing.Size(217, 22);
             this.txtNewFile.TabIndex = 4;
@@ -79,7 +79,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(38, 34);
+            this.label1.Location = new System.Drawing.Point(32, 23);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(68, 12);
             this.label1.TabIndex = 6;
@@ -88,7 +88,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(35, 73);
+            this.label2.Location = new System.Drawing.Point(29, 62);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(71, 12);
             this.label2.TabIndex = 7;
@@ -96,7 +96,7 @@
             // 
             // btnclose
             // 
-            this.btnclose.Location = new System.Drawing.Point(345, 140);
+            this.btnclose.Location = new System.Drawing.Point(339, 129);
             this.btnclose.Name = "btnclose";
             this.btnclose.Size = new System.Drawing.Size(57, 31);
             this.btnclose.TabIndex = 8;
@@ -106,7 +106,7 @@
             // 
             // txtErrorCNT
             // 
-            this.txtErrorCNT.Location = new System.Drawing.Point(109, 146);
+            this.txtErrorCNT.Location = new System.Drawing.Point(103, 135);
             this.txtErrorCNT.Name = "txtErrorCNT";
             this.txtErrorCNT.Size = new System.Drawing.Size(76, 22);
             this.txtErrorCNT.TabIndex = 9;
@@ -114,7 +114,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(47, 151);
+            this.label3.Location = new System.Drawing.Point(41, 140);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(59, 12);
             this.label3.TabIndex = 10;
@@ -123,7 +123,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(47, 112);
+            this.label4.Location = new System.Drawing.Point(41, 101);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(59, 12);
             this.label4.TabIndex = 13;
@@ -131,7 +131,7 @@
             // 
             // btnExport
             // 
-            this.btnExport.Location = new System.Drawing.Point(345, 103);
+            this.btnExport.Location = new System.Drawing.Point(339, 92);
             this.btnExport.Name = "btnExport";
             this.btnExport.Size = new System.Drawing.Size(57, 23);
             this.btnExport.TabIndex = 12;
@@ -141,7 +141,7 @@
             // 
             // txtExport
             // 
-            this.txtExport.Location = new System.Drawing.Point(109, 107);
+            this.txtExport.Location = new System.Drawing.Point(103, 96);
             this.txtExport.Name = "txtExport";
             this.txtExport.Size = new System.Drawing.Size(217, 22);
             this.txtExport.TabIndex = 11;

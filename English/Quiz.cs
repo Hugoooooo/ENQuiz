@@ -117,7 +117,10 @@ namespace English
 
         private void btnTranslate_Click(object sender, EventArgs e)
         {
+            lblTranslate.Text = "翻譯中.....";
+            this.Update();
             lblTranslate.Text = APConfig.TranslateText(lblShow.Text);
         }
+
     }
 }

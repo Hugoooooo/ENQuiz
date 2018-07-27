@@ -45,11 +45,14 @@ namespace English
         {
             if (APConfig.oldPath == "")
             {
-                MessageBox.Show("請先設置檔案");
+                MessageBox.Show("請先設置檔案!");
                 return;
             }
             if (listWord.Items.Count <= 0)
+            {
+                MessageBox.Show("請輸入題目!");
                 return;
+            }
             using (Quiz form = new Quiz(listWord))
             {
                 var result = form.ShowDialog();
