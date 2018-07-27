@@ -1,0 +1,10 @@
+C:\Users\PangWu\Desktop\Howard\English\Pratice\obj\Debug\Pratice.Form1.resources
+C:\Users\PangWu\Desktop\Howard\English\Pratice\obj\Debug\Pratice.Properties.Resources.resources
+C:\Users\PangWu\Desktop\Howard\English\Pratice\obj\Debug\Pratice.csproj.GenerateResource.Cache
+C:\Users\PangWu\Desktop\Howard\English\Pratice\bin\Debug\Pratice.exe.config
+C:\Users\PangWu\Desktop\Howard\English\Pratice\bin\Debug\Pratice.exe
+C:\Users\PangWu\Desktop\Howard\English\Pratice\bin\Debug\Pratice.pdb
+C:\Users\PangWu\Desktop\Howard\English\Pratice\obj\Debug\Pratice.Form3.resources
+C:\Users\PangWu\Desktop\Howard\English\Pratice\obj\Debug\Pratice.exe
+C:\Users\PangWu\Desktop\Howard\English\Pratice\obj\Debug\Pratice.pdb
+C:\Users\PangWu\Desktop\Howard\English\Pratice\obj\Debug\Pratice.Form2.resources

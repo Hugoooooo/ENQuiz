@@ -1,0 +1,12 @@
+C:\Users\PangWu\Desktop\Howard\English\English\bin\Debug\English.exe.config
+C:\Users\PangWu\Desktop\Howard\English\English\bin\Debug\English.exe
+C:\Users\PangWu\Desktop\Howard\English\English\bin\Debug\English.pdb
+C:\Users\PangWu\Desktop\Howard\English\English\obj\Debug\English.Properties.Resources.resources
+C:\Users\PangWu\Desktop\Howard\English\English\obj\Debug\English.csproj.GenerateResource.Cache
+C:\Users\PangWu\Desktop\Howard\English\English\obj\Debug\English.exe
+C:\Users\PangWu\Desktop\Howard\English\English\obj\Debug\English.pdb
+C:\Users\PangWu\Desktop\Howard\English\English\obj\Debug\English.csprojResolveAssemblyReference.cache
+C:\Users\PangWu\Desktop\Howard\English\English\obj\Debug\English.Main.resources
+C:\Users\PangWu\Desktop\Howard\English\English\obj\Debug\English.Quiz.resources
+C:\Users\PangWu\Desktop\Howard\English\English\obj\Debug\English.Setting.resources
+C:\Users\PangWu\Desktop\Howard\English\English\obj\Debug\English.csproj.CoreCompileInputs.cache
