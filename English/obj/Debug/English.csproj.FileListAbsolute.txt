@@ -10,3 +10,15 @@ C:\Users\PangWu\Desktop\Howard\English\English\obj\Debug\English.Main.resources
 C:\Users\PangWu\Desktop\Howard\English\English\obj\Debug\English.Quiz.resources
 C:\Users\PangWu\Desktop\Howard\English\English\obj\Debug\English.Setting.resources
 C:\Users\PangWu\Desktop\Howard\English\English\obj\Debug\English.csproj.CoreCompileInputs.cache
+D:\Code\ENQuiz\ENQuiz\English\bin\Debug\English.exe.config
+D:\Code\ENQuiz\ENQuiz\English\obj\Debug\English.exe
+D:\Code\ENQuiz\ENQuiz\English\obj\Debug\English.pdb
+D:\Code\ENQuiz\ENQuiz\English\obj\Debug\English.Main.resources
+D:\Code\ENQuiz\ENQuiz\English\obj\Debug\English.Quiz.resources
+D:\Code\ENQuiz\ENQuiz\English\obj\Debug\English.Setting.resources
+D:\Code\ENQuiz\ENQuiz\English\obj\Debug\English.Properties.Resources.resources
+D:\Code\ENQuiz\ENQuiz\English\obj\Debug\English.csproj.GenerateResource.Cache
+D:\Code\ENQuiz\ENQuiz\English\bin\Debug\English.exe
+D:\Code\ENQuiz\ENQuiz\English\bin\Debug\English.pdb
+D:\Code\ENQuiz\ENQuiz\English\obj\Debug\English.Export.resources
+D:\Code\ENQuiz\ENQuiz\English\obj\Debug\English.csprojResolveAssemblyReference.cache

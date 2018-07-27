@@ -14,9 +14,7 @@ namespace English
 {
     public partial class Quiz : Form
     {
-        public static string filePath = "";
-        public static int ErrorLimit = 3;
-        public static List<string> WrongItem = new List<string>();
+        public List<string> WrongItem = new List<string>();
         public List<string> ExamItem = new List<string>();
         public int Current = 0;
         public int ErrorCount = 0;
@@ -24,12 +22,12 @@ namespace English
         {
             InitializeComponent();
             ErrorCount = 0;
+            lblTranslate.Text = "";
             foreach (var item in box.Items)
             {
                 ExamItem.Add(item.ToString());
             }
             ExamItem = ExamItem.OrderBy(x => Guid.NewGuid()).ToList();
-            ExamItem = RandomSortList(ExamItem);
             UpdateLable();
         }
 
@@ -40,25 +38,15 @@ namespace English
                 FinishView();
                 return;
             }
-            lblShow.Text = ExamItem[Current];
+            lblShow.Text = ExamItem[Current];         
+            lblTranslate.Text = string.Empty;
             Current++;
-        }
-
-        public List<T> RandomSortList<T>(List<T> ListT)
-        {
-            Random random = new Random();
-            List<T> newList = new List<T>();
-            foreach (T item in ListT)
-            {
-                newList.Insert(random.Next(newList.Count + 1), item);
-            }
-            return newList;
         }
 
         private void FinishView() 
         {
             if (WrongItem.Count == 0)
-                MessageBox.Show("Good!");
+                MessageBox.Show("Good!完成測驗");
             else
             {
                 string wrongStr ="錯誤單字\n";
@@ -68,7 +56,7 @@ namespace English
                 }
                 MessageBox.Show(wrongStr);
                 
-                using (var stream = File.Open(filePath, FileMode.Open, FileAccess.ReadWrite))
+                using (var stream = File.Open(APConfig.oldPath, FileMode.Open, FileAccess.ReadWrite))
                 using (var reader = new StreamReader(stream))
                 using (var writer = new StreamWriter(stream))
                 {
@@ -96,8 +84,6 @@ namespace English
                         writer.WriteLine(item);
                     }
                 }
-
-
             }
             WrongItem.Clear();
             this.Close();
@@ -113,9 +99,9 @@ namespace English
         {
             ErrorCount++;
             WrongItem.Add(lblShow.Text);
-            if (ErrorCount >= ErrorLimit)
+            if (ErrorCount >= APConfig.errorLimit)
             {
-                MessageBox.Show("搞毛?????????????????????????????????");
+                MessageBox.Show("下次再來!");
                 FinishView();
                 return;
             }
@@ -131,7 +117,7 @@ namespace English
 
         private void btnTranslate_Click(object sender, EventArgs e)
         {
-
+            lblTranslate.Text = APConfig.TranslateText(lblShow.Text);
         }
     }
 }

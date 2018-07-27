@@ -12,12 +12,14 @@ namespace English
 {
     public partial class Setting : Form
     {
+
         public Setting()
         {
             InitializeComponent();
-            txtFile.Text = Quiz.filePath;
-            txtNewFile.Text = Main.newFilePath;
-            txtErrorCNT.Text = Quiz.ErrorLimit.ToString();
+            txtFile.Text = APConfig.oldPath;
+            txtNewFile.Text = APConfig.newPath;
+            txtExport.Text = APConfig.exportPath;
+            txtErrorCNT.Text = APConfig.errorLimit.ToString();
         }
 
         private void btnFile_Click(object sender, EventArgs e)
@@ -26,7 +28,6 @@ namespace English
             if (openFileDialog1.ShowDialog(this) == DialogResult.OK)
             {
                 txtFile.Text = openFileDialog1.InitialDirectory + openFileDialog1.FileName;
-                Quiz.filePath = txtFile.Text;
             }
         }
 
@@ -36,14 +37,26 @@ namespace English
             if (openFileDialog1.ShowDialog(this) == DialogResult.OK)
             {
                 txtNewFile.Text = openFileDialog1.InitialDirectory + openFileDialog1.FileName;
-                Main.newFilePath = txtNewFile.Text;
             }
         }
 
         private void btnclose_Click(object sender, EventArgs e)
         {
-            Quiz.ErrorLimit = Int32.Parse(txtErrorCNT.Text);
+            APConfig.oldPath = txtFile.Text;
+            APConfig.newPath = txtNewFile.Text;
+            APConfig.exportPath = txtExport.Text;
+            APConfig.errorLimit = Int32.Parse(txtErrorCNT.Text);
             this.Close();
+        }
+
+
+        private void btnExport_Click(object sender, EventArgs e)
+        {
+            FolderBrowserDialog fbd = new FolderBrowserDialog();
+            if (fbd.ShowDialog(this) == DialogResult.OK)
+            {
+                txtExport.Text = fbd.SelectedPath;
+            }
         }
     }
 }

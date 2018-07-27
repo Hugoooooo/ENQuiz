@@ -8,3 +8,14 @@ C:\Users\PangWu\Desktop\Howard\English\Pratice\obj\Debug\Pratice.Form3.resources
 C:\Users\PangWu\Desktop\Howard\English\Pratice\obj\Debug\Pratice.exe
 C:\Users\PangWu\Desktop\Howard\English\Pratice\obj\Debug\Pratice.pdb
 C:\Users\PangWu\Desktop\Howard\English\Pratice\obj\Debug\Pratice.Form2.resources
+D:\Code\ENQuiz\ENQuiz\Pratice\bin\Debug\Pratice.exe.config
+D:\Code\ENQuiz\ENQuiz\Pratice\bin\Debug\Pratice.exe
+D:\Code\ENQuiz\ENQuiz\Pratice\bin\Debug\Pratice.pdb
+D:\Code\ENQuiz\ENQuiz\Pratice\obj\Debug\Pratice.Form1.resources
+D:\Code\ENQuiz\ENQuiz\Pratice\obj\Debug\Pratice.Form2.resources
+D:\Code\ENQuiz\ENQuiz\Pratice\obj\Debug\Pratice.Form3.resources
+D:\Code\ENQuiz\ENQuiz\Pratice\obj\Debug\Pratice.Properties.Resources.resources
+D:\Code\ENQuiz\ENQuiz\Pratice\obj\Debug\Pratice.csproj.GenerateResource.Cache
+D:\Code\ENQuiz\ENQuiz\Pratice\obj\Debug\Pratice.exe
+D:\Code\ENQuiz\ENQuiz\Pratice\obj\Debug\Pratice.pdb
+D:\Code\ENQuiz\ENQuiz\Pratice\obj\Debug\Pratice.csprojResolveAssemblyReference.cache

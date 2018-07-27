@@ -41,10 +41,10 @@
             // lblShow
             // 
             this.lblShow.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblShow.Font = new System.Drawing.Font("Calibri", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblShow.Font = new System.Drawing.Font("Calibri", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblShow.Location = new System.Drawing.Point(0, 0);
             this.lblShow.Name = "lblShow";
-            this.lblShow.Size = new System.Drawing.Size(560, 217);
+            this.lblShow.Size = new System.Drawing.Size(582, 262);
             this.lblShow.TabIndex = 0;
             this.lblShow.Text = "txt";
             this.lblShow.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -76,9 +76,9 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.lblShow);
-            this.panel1.Location = new System.Drawing.Point(12, 12);
+            this.panel1.Location = new System.Drawing.Point(1, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(560, 217);
+            this.panel1.Size = new System.Drawing.Size(582, 262);
             this.panel1.TabIndex = 4;
             // 
             // btnTranslate
@@ -106,11 +106,11 @@
             // 
             // lblTranslate
             // 
-            this.lblTranslate.Font = new System.Drawing.Font("Calibri", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTranslate.Font = new System.Drawing.Font("微軟正黑體", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.lblTranslate.ForeColor = System.Drawing.Color.Gray;
-            this.lblTranslate.Location = new System.Drawing.Point(19, 206);
+            this.lblTranslate.Location = new System.Drawing.Point(0, 206);
             this.lblTranslate.Name = "lblTranslate";
-            this.lblTranslate.Size = new System.Drawing.Size(560, 68);
+            this.lblTranslate.Size = new System.Drawing.Size(583, 68);
             this.lblTranslate.TabIndex = 1;
             this.lblTranslate.Text = "txt";
             this.lblTranslate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;

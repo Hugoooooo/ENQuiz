@@ -14,29 +14,24 @@ namespace English
 {
     public partial class Main : Form
     {
-        public static string newFilePath = "";
         public Main()
         {
             InitializeComponent();
             RefreshCount();
-            Quiz.filePath = ConfigurationManager.AppSettings["FilePath"];
-            newFilePath = ConfigurationManager.AppSettings["NewFilePath"];
+            APConfig.oldPath = ConfigurationManager.AppSettings["oldPath"];
+            APConfig.newPath = ConfigurationManager.AppSettings["newPath"];
         }
 
         private void btnImport_Click(object sender, EventArgs e)
         {
-            string importTxt = txtInput.Text;
-            if (importTxt == "")
+            if (txtInput.Text == "")
                 return;
-            foreach (string item in listWord.Items)
+            if (listWord.Items.Contains(txtInput.Text))
             {
-                if (item == importTxt)
-                {
-                    MessageBox.Show(string.Format("{0} is repeat !!", importTxt));
-                    return;
-                }
+                MessageBox.Show(string.Format("{0} 已經存在 !!", txtInput.Text));
+                return;
             }
-            listWord.Items.Add(importTxt);
+            listWord.Items.Add(txtInput.Text);
             txtInput.Clear();
             RefreshCount();
         }
@@ -48,93 +43,74 @@ namespace English
 
         private void btnTest_Click(object sender, EventArgs e)
         {
-            if (Quiz.filePath == "")
+            if (APConfig.oldPath == "")
             {
                 MessageBox.Show("請先設置檔案");
                 return;
             }
             if (listWord.Items.Count <= 0)
                 return;
-            Quiz frm = new Quiz(listWord);
-            frm.Show();
+            using (Quiz form = new Quiz(listWord))
+            {
+                var result = form.ShowDialog();
+            }
         }
 
         private void btnSetting_Click(object sender, EventArgs e)
         {
-            Setting frm = new Setting();
-            frm.Show();
+            using (Setting form = new Setting())
+            {
+                var result = form.ShowDialog();
+            }
         }
 
         private void btnOld_Click(object sender, EventArgs e)
         {
-            if (Quiz.filePath == "")
+            if (APConfig.oldPath == "")
             {
                 MessageBox.Show("請先設置檔案");
                 return;
             }
+            #region 導入舊資料
             List<string> oldData = new List<string>();
-            using (StreamReader sr = new StreamReader(Quiz.filePath))
+            using (StreamReader sr = new StreamReader(APConfig.oldPath))
             {
                 string line = "";
-                while ((line = sr.ReadLine()) != null)
+                while (!string.IsNullOrEmpty(line = sr.ReadLine()))
                 {
                     oldData.Add(line);
                 }
             }
-            oldData = RandomSortList(oldData);
-            bool repeat = false;
-            int cur = 0;
-            int point = 0;
+            oldData = oldData.OrderBy(x => Guid.NewGuid()).ToList();
+            int cur = 0,point = 0;
             while(cur<5)
             {
-                repeat = false;
-                if (point == oldData.Count - 1)
+                if (point == oldData.Count)
                 {
                     MessageBox.Show("已經沒有多餘舊資料");
                     break;
                 }
-                foreach(string item in listWord.Items)
-                {
-                    if (item == oldData[point])
-                    {
-                        repeat = true;
-                        break;
-                    }
-                }
-                if (!repeat)
+                if (!listWord.Items.Contains(oldData[point]))
                 {
                     listWord.Items.Add(oldData[point]);
                     cur++;
                 }
                 point++;
             }
+            #endregion
             RefreshCount(); 
-        }
 
-        public List<T> RandomSortList<T>(List<T> ListT)
-        {
-            Random random = new Random();
-            List<T> newList = new List<T>();
-            foreach (T item in ListT)
-            {
-                newList.Insert(random.Next(newList.Count + 1), item);
-            }
-            return newList;
-        }
-        private void btnDelete_Click(object sender, EventArgs e)
-        {
-            listWord.Items.RemoveAt(listWord.SelectedIndex);
         }
 
         private void btnImportTxT_Click(object sender, EventArgs e)
         {
-            if (newFilePath == "")
+            if (string.IsNullOrEmpty(APConfig.newPath))
             {
                 MessageBox.Show("請設置檔案");
                 return;
             }
 
-            using (var stream = File.Open(newFilePath, FileMode.Open, FileAccess.ReadWrite))
+            using (var stream = File.Open(APConfig.newPath, FileMode.Open, FileAccess.ReadWrite))
             using (var reader = new StreamReader(stream))
             using (var writer = new StreamWriter(stream))
             {
@@ -145,7 +121,45 @@ namespace English
                 }
             }
             RefreshCount();
-
         }
+
+
+        private void deleteItem()
+        {
+            if (listWord.Items.Count != 0 && listWord.SelectedIndex != -1)
+            {
+                int index = listWord.SelectedIndex;
+                listWord.Items.Remove(listWord.SelectedItem.ToString());
+                listWord.SelectedIndex = index - 1;
+                RefreshCount();
+            }
+        }
+
+        private void listWord_KeyDown(object sender, KeyEventArgs e)
+        {
+            deleteItem();
+        }
+
+        private void txtInput_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (System.Text.Encoding.UTF8.GetByteCount(new char[] { e.KeyChar }) > 1)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void btnExport_Click(object sender, EventArgs e)
+        {
+            if (listWord.Items.Count <= 0 && string.IsNullOrEmpty(APConfig.exportPath))
+            {
+                MessageBox.Show("請設置匯出資料夾!");
+                return;
+            }
+            using (Export form = new Export(listWord))
+            {
+                var result = form.ShowDialog();
+            }
+        }
+
     }
 }
