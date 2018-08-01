@@ -20,6 +20,7 @@ namespace English
             RefreshCount();
             APConfig.oldPath = ConfigurationManager.AppSettings["oldPath"];
             APConfig.newPath = ConfigurationManager.AppSettings["newPath"];
+            APConfig.exportPath = ConfigurationManager.AppSettings["exportPath"];
         }
 
         private void btnImport_Click(object sender, EventArgs e)

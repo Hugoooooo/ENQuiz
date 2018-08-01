@@ -19,3 +19,15 @@ D:\Code\ENQuiz\ENQuiz\Pratice\obj\Debug\Pratice.csproj.GenerateResource.Cache
 D:\Code\ENQuiz\ENQuiz\Pratice\obj\Debug\Pratice.exe
 D:\Code\ENQuiz\ENQuiz\Pratice\obj\Debug\Pratice.pdb
 D:\Code\ENQuiz\ENQuiz\Pratice\obj\Debug\Pratice.csprojResolveAssemblyReference.cache
+D:\Code\ENQuiz\Pratice\bin\Debug\Pratice.exe.config
+D:\Code\ENQuiz\Pratice\bin\Debug\Pratice.exe
+D:\Code\ENQuiz\Pratice\bin\Debug\Pratice.pdb
+D:\Code\ENQuiz\Pratice\obj\Debug\Pratice.csprojAssemblyReference.cache
+D:\Code\ENQuiz\Pratice\obj\Debug\Pratice.Form1.resources
+D:\Code\ENQuiz\Pratice\obj\Debug\Pratice.Form2.resources
+D:\Code\ENQuiz\Pratice\obj\Debug\Pratice.Form3.resources
+D:\Code\ENQuiz\Pratice\obj\Debug\Pratice.Properties.Resources.resources
+D:\Code\ENQuiz\Pratice\obj\Debug\Pratice.csproj.GenerateResource.cache
+D:\Code\ENQuiz\Pratice\obj\Debug\Pratice.csproj.CoreCompileInputs.cache
+D:\Code\ENQuiz\Pratice\obj\Debug\Pratice.exe
+D:\Code\ENQuiz\Pratice\obj\Debug\Pratice.pdb

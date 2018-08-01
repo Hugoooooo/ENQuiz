@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 using System.Configuration;
+using SpeechLib;
 
 namespace English
 {
@@ -115,12 +116,32 @@ namespace English
             this.Close();
         }
 
-        private void btnTranslate_Click(object sender, EventArgs e)
+        private void pbxSpeak_Click(object sender, EventArgs e)
         {
-            lblTranslate.Text = "翻譯中.....";
-            this.Update();
-            lblTranslate.Text = APConfig.TranslateText(lblShow.Text);
+            try
+            {
+                SpVoiceClass voice = new SpVoiceClass();
+                voice.Voice = voice.GetVoices(string.Empty, string.Empty).Item(1);//Item(1)男聲
+                voice.Speak(lblShow.Text, SpeechVoiceSpeakFlags.SVSFlagsAsync);
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
         }
 
+        private void pbxTransalte_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                lblTranslate.Text = "翻譯中.....";
+                this.Update();
+                lblTranslate.Text = APConfig.TranslateText(lblShow.Text);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
     }
 }

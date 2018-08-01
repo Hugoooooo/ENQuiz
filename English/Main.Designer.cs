@@ -98,7 +98,7 @@
             this.btnOld.Name = "btnOld";
             this.btnOld.Size = new System.Drawing.Size(90, 40);
             this.btnOld.TabIndex = 7;
-            this.btnOld.Text = "舊資料";
+            this.btnOld.Text = "隨機導入";
             this.btnOld.UseVisualStyleBackColor = true;
             this.btnOld.Click += new System.EventHandler(this.btnOld_Click);
             // 

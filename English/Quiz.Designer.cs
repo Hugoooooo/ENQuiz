@@ -28,14 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Quiz));
             this.lblShow = new System.Windows.Forms.Label();
             this.btnCorrect = new System.Windows.Forms.Button();
             this.btnWrong = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnTranslate = new System.Windows.Forms.Button();
             this.lblError = new System.Windows.Forms.Label();
             this.lblTranslate = new System.Windows.Forms.Label();
+            this.pbxSpeak = new System.Windows.Forms.PictureBox();
+            this.pbxTransalte = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxSpeak)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxTransalte)).BeginInit();
             this.SuspendLayout();
             // 
             // lblShow
@@ -81,18 +85,6 @@
             this.panel1.Size = new System.Drawing.Size(582, 262);
             this.panel1.TabIndex = 4;
             // 
-            // btnTranslate
-            // 
-            this.btnTranslate.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btnTranslate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnTranslate.Location = new System.Drawing.Point(12, 292);
-            this.btnTranslate.Name = "btnTranslate";
-            this.btnTranslate.Size = new System.Drawing.Size(44, 40);
-            this.btnTranslate.TabIndex = 5;
-            this.btnTranslate.Text = "譯";
-            this.btnTranslate.UseVisualStyleBackColor = true;
-            this.btnTranslate.Click += new System.EventHandler(this.btnTranslate_Click);
-            // 
             // lblError
             // 
             this.lblError.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
@@ -115,15 +107,38 @@
             this.lblTranslate.Text = "txt";
             this.lblTranslate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // pbxSpeak
+            // 
+            this.pbxSpeak.Image = ((System.Drawing.Image)(resources.GetObject("pbxSpeak.Image")));
+            this.pbxSpeak.Location = new System.Drawing.Point(56, 300);
+            this.pbxSpeak.Name = "pbxSpeak";
+            this.pbxSpeak.Size = new System.Drawing.Size(25, 25);
+            this.pbxSpeak.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbxSpeak.TabIndex = 1;
+            this.pbxSpeak.TabStop = false;
+            this.pbxSpeak.Click += new System.EventHandler(this.pbxSpeak_Click);
+            // 
+            // pbxTransalte
+            // 
+            this.pbxTransalte.Image = ((System.Drawing.Image)(resources.GetObject("pbxTransalte.Image")));
+            this.pbxTransalte.Location = new System.Drawing.Point(17, 300);
+            this.pbxTransalte.Name = "pbxTransalte";
+            this.pbxTransalte.Size = new System.Drawing.Size(25, 25);
+            this.pbxTransalte.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbxTransalte.TabIndex = 6;
+            this.pbxTransalte.TabStop = false;
+            this.pbxTransalte.Click += new System.EventHandler(this.pbxTransalte_Click);
+            // 
             // Quiz
             // 
             this.AcceptButton = this.btnCorrect;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(584, 362);
+            this.Controls.Add(this.pbxTransalte);
+            this.Controls.Add(this.pbxSpeak);
             this.Controls.Add(this.lblTranslate);
             this.Controls.Add(this.lblError);
-            this.Controls.Add(this.btnTranslate);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnWrong);
             this.Controls.Add(this.btnCorrect);
@@ -131,6 +146,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "測驗";
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbxSpeak)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxTransalte)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -141,8 +158,9 @@
         private System.Windows.Forms.Button btnCorrect;
         private System.Windows.Forms.Button btnWrong;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button btnTranslate;
         private System.Windows.Forms.Label lblError;
         private System.Windows.Forms.Label lblTranslate;
+        private System.Windows.Forms.PictureBox pbxSpeak;
+        private System.Windows.Forms.PictureBox pbxTransalte;
     }
 }
