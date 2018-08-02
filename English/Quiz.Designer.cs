@@ -37,6 +37,7 @@
             this.lblTranslate = new System.Windows.Forms.Label();
             this.pbxSpeak = new System.Windows.Forms.PictureBox();
             this.pbxTransalte = new System.Windows.Forms.PictureBox();
+            this.ckbAuto = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxSpeak)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxTransalte)).BeginInit();
@@ -79,6 +80,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.ckbAuto);
             this.panel1.Controls.Add(this.lblShow);
             this.panel1.Location = new System.Drawing.Point(1, 12);
             this.panel1.Name = "panel1";
@@ -129,6 +131,17 @@
             this.pbxTransalte.TabStop = false;
             this.pbxTransalte.Click += new System.EventHandler(this.pbxTransalte_Click);
             // 
+            // ckbAuto
+            // 
+            this.ckbAuto.AutoSize = true;
+            this.ckbAuto.Font = new System.Drawing.Font("微軟正黑體", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.ckbAuto.Location = new System.Drawing.Point(483, 0);
+            this.ckbAuto.Name = "ckbAuto";
+            this.ckbAuto.Size = new System.Drawing.Size(88, 23);
+            this.ckbAuto.TabIndex = 1;
+            this.ckbAuto.Text = "自動朗讀";
+            this.ckbAuto.UseVisualStyleBackColor = true;
+            // 
             // Quiz
             // 
             this.AcceptButton = this.btnCorrect;
@@ -146,6 +159,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "測驗";
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxSpeak)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxTransalte)).EndInit();
             this.ResumeLayout(false);
@@ -162,5 +176,6 @@
         private System.Windows.Forms.Label lblTranslate;
         private System.Windows.Forms.PictureBox pbxSpeak;
         private System.Windows.Forms.PictureBox pbxTransalte;
+        private System.Windows.Forms.CheckBox ckbAuto;
     }
 }

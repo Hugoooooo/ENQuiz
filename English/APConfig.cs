@@ -9,6 +9,7 @@ using System.Runtime.InteropServices;
 using System.Configuration;
 using System.Windows.Forms;
 using System.Net;
+using SpeechLib;
 
 namespace English
 {
@@ -38,6 +39,34 @@ namespace English
             {
                 MessageBox.Show(ex.Message);
                 return "Error";
+            }
+        }
+
+        public static void SpeechEnglish(string txt)
+        {
+            try
+            {
+                SpVoiceClass voice = new SpVoiceClass();
+                voice.Voice = voice.GetVoices(string.Empty, string.Empty).Item(1);
+                voice.Speak(txt, SpeechVoiceSpeakFlags.SVSFlagsAsync);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
+
+        public static void SpeechChinese(string txt)
+        {
+            try
+            {
+                SpVoiceClass voice = new SpVoiceClass();
+                voice.Voice = voice.GetVoices(string.Empty, string.Empty).Item(0);//Item(0)中文女聲
+                voice.Speak(txt, SpeechVoiceSpeakFlags.SVSFDefault);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
             }
         }
     }

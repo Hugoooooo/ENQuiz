@@ -42,6 +42,8 @@ namespace English
             lblShow.Text = ExamItem[Current];         
             lblTranslate.Text = string.Empty;
             Current++;
+            if(ckbAuto.Checked)
+                APConfig.SpeechEnglish(lblShow.Text);
         }
 
         private void FinishView() 
@@ -102,6 +104,7 @@ namespace English
             WrongItem.Add(lblShow.Text);
             if (ErrorCount >= APConfig.errorLimit)
             {
+                APConfig.SpeechChinese("掰掰");
                 MessageBox.Show("下次再來!");
                 FinishView();
                 return;
@@ -118,16 +121,7 @@ namespace English
 
         private void pbxSpeak_Click(object sender, EventArgs e)
         {
-            try
-            {
-                SpVoiceClass voice = new SpVoiceClass();
-                voice.Voice = voice.GetVoices(string.Empty, string.Empty).Item(1);//Item(1)男聲
-                voice.Speak(lblShow.Text, SpeechVoiceSpeakFlags.SVSFlagsAsync);
-            }
-            catch(Exception ex)
-            {
-                MessageBox.Show(ex.ToString());
-            }
+            APConfig.SpeechEnglish(lblShow.Text);
         }
 
         private void pbxTransalte_Click(object sender, EventArgs e)

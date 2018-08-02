@@ -24,7 +24,6 @@ D:\Code\ENQuiz\ENQuiz\English\obj\Debug\English.Export.resources
 D:\Code\ENQuiz\English\bin\Debug\English.exe.config
 D:\Code\ENQuiz\English\bin\Debug\English.exe
 D:\Code\ENQuiz\English\bin\Debug\English.pdb
-D:\Code\ENQuiz\English\obj\Debug\English.csprojAssemblyReference.cache
 D:\Code\ENQuiz\English\obj\Debug\English.Main.resources
 D:\Code\ENQuiz\English\obj\Debug\English.Quiz.resources
 D:\Code\ENQuiz\English\obj\Debug\English.Export.resources
